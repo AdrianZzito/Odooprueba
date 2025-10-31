@@ -12,7 +12,7 @@ Primero de todo, debemos crear los ficheros requeridos para que nuestro futuro s
 	- .gitkeep
 - Dockerfile
 
-## 2. Rellenar fichero Dockerfile
+## 2. Rellenar fichero Dockerfile y manifest.py
 En el interior de nuestro fichero Dockerfile, introduciremos lo siguiente:
 ```
 # Imagen base Odoo 17
@@ -41,6 +41,18 @@ odoo --db_host=$PGHOST --db_port=$PGPORT \
 --addons-path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons \
 --db-filter=$PGDATABASE \
 --dev=all"]
+```
+
+Y a continuacion, en el fichero __manifest__.py introduciremos lo siguiente:
+
+```
+{
+    "name": "Dummy Module",
+    "version": "1.0",
+    "summary": "Módulo vacío de prueba",
+    "installable": True,
+}
+
 ```
 
 

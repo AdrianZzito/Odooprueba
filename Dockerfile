@@ -1,5 +1,5 @@
 # Imagen base Odoo 17
-FROM odoo:17
+FROM odoo:latest
 # (Opcional) módulos propios
 COPY ./extra-addons /mnt/extra-addons
 # Puerto HTTP de Odoo
